@@ -24,12 +24,8 @@ public class MerchantTransfer {
         request.addParam("toUserType", "MEMBER");//转账到用户账户
         request.addParam("toUserNo", Config.TO_USER);//转账到的支付+账户
         request.addParam("amount", "0.01");//转账金额
-<<<<<<< .mine
         request.addParam("rechargeRequestNo", "MHTCZ20161026113805850HsjircK");
         request.addParam("transferType", "USER_TO_USER");
-=======
-        request.addParam("trxRequestNo", "12321312321");
->>>>>>> .r10341
         //参数 end
         YopResponse response = YopClient.post(INTERFACE_URI, request);//发送报文
         System.out.println(response.toString());//处理返回结果
