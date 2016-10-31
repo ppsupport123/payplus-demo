@@ -1,15 +1,14 @@
 package com.yeepay.payplus.demo.fund.info;
 
-import org.apache.commons.lang.builder.ToStringBuilder;
-
 import com.yeepay.g3.sdk.yop.client.YopClient;
 import com.yeepay.g3.sdk.yop.client.YopRequest;
 import com.yeepay.g3.sdk.yop.client.YopResponse;
 import com.yeepay.payplus.demo.Config;
+import org.apache.commons.lang.builder.ToStringBuilder;
 
 /**
  * 用户验证密码
- * 
+ *
  * @author：zhaowei.zhang
  * @since：2016年9月2日 下午5:38:59
  * @version:
@@ -38,9 +37,8 @@ public class MemberPswdVerifyUrl {
          * 提现-WITHDRAW
          * 转账-TRANSFER
          * 绑卡-BIND_CARD
-         * 解绑卡-UN_BIND_CARD（这个类型文档没写哦~~） 
+         * 解绑卡-UN_BIND_CARD
          * 支付-PAY
-         * 
          */
         request.addParam("tokenBizType", "TRANSFER");// 生成token业务类型
         request.addParam("webCallBackUrl", "https://www.baidu.com");// 密码校验完成后返回商户的地址
