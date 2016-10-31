@@ -1,15 +1,14 @@
 package com.yeepay.payplus.demo.fund.info;
 
-import org.apache.commons.lang.builder.ToStringBuilder;
-
 import com.yeepay.g3.sdk.yop.client.YopClient;
 import com.yeepay.g3.sdk.yop.client.YopRequest;
 import com.yeepay.g3.sdk.yop.client.YopResponse;
 import com.yeepay.payplus.demo.Config;
+import org.apache.commons.lang.builder.ToStringBuilder;
 
 /**
  * 用户实名认证
- * 
+ *
  * @author：zhaowei.zhang
  * @since：2016年9月2日 下午5:38:47
  * @version:

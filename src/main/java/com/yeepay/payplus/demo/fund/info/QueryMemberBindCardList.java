@@ -7,6 +7,7 @@ import com.yeepay.payplus.demo.Config;
 
 /**
  * 会员绑卡列表
+ *
  * @author: 王宁
  * @since: 2016年-09月-02日 下午4:37
  * @Version:1.0
@@ -18,7 +19,7 @@ public class QueryMemberBindCardList {
      */
     public static final String INTERFACE_URI = "/rest/v1.0/user/queryBindCardList";
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         YopRequest request = new YopRequest(Config.APP_KEY, Config.APP_SECRET, Config.URL);
         request.setEncrypt(true);
@@ -27,7 +28,7 @@ public class QueryMemberBindCardList {
 
         //参数 begin
         request.addParam("merchantNo", Config.MERCHANTNO);//商户编号必填
-        request.addParam("merchantUserId", Config.MERCHANT_USER_ID);//商户用户标识必填
+        request.addParam("merchantUserId", Config.USER_ID_MARCOJAN);//商户用户标识必填
         //参数 end
 
         YopResponse response = YopClient.post(INTERFACE_URI, request);//发送报文

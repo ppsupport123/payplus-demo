@@ -29,7 +29,7 @@ public class MemberPswdVerifyUrl {
         // 参数 begin
         request.addParam("requestNo", System.currentTimeMillis());// 商户请求号，投产时请不要使用时间戳，避免并发重复
         request.addParam("merchantNo", Config.MERCHANTNO);// 商户编号必填
-        request.addParam("merchantUserId", Config.MERCHANT_USER_ID);// 商户用户标识必填
+        request.addParam("merchantUserId", Config.USER_ID_MARCOJAN);// 商户用户标识必填
         /**
          * 实名认证-VERIFY
          * 修改支付密码-MODIFY
@@ -40,7 +40,7 @@ public class MemberPswdVerifyUrl {
          * 解绑卡-UN_BIND_CARD
          * 支付-PAY
          */
-        request.addParam("tokenBizType", "TRANSFER");// 生成token业务类型
+        request.addParam("tokenBizType", "UN_BIND_CARD");// 生成token业务类型
         request.addParam("webCallBackUrl", "https://www.baidu.com");// 密码校验完成后返回商户的地址
         request.addParam("returnUrl", "http://www.qq.com"); // 点击“返回”的回退地址
         // 参数 end
