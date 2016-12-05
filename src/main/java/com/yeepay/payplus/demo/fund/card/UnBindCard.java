@@ -28,11 +28,11 @@ public class UnBindCard {
 
         //参数 begin
         request.addParam("merchantNo", Config.MERCHANTNO);//商户编号必填
-        request.addParam("merchantUserId", Config.USER_ID_MARCOJAN);//商户用户标识   必填
-        request.addParam("bindId","46020689");//需要解绑的绑卡ID(通过绑卡列表查询接口获得) 必填
+        request.addParam("merchantUserId", Config.YANGYANG);//商户用户标识   必填
+        request.addParam("bindId","51650796");//需要解绑的绑卡ID(通过绑卡列表查询接口获得) 必填
         request.addParam("reason","apply for unbind card");//解绑卡原因 必填
-        request.addParam("requestNo", "unbind_card_1476072280");//商户请求号(注:此流水号为验密的请求流水)必填
-        request.addParam("token","7b504fa552a74217b1aae863371ec5e3");//验密生成的Token值  必填
+        request.addParam("requestNo", "1480496008773");//商户请求号(注:此流水号为验密的请求流水)必填
+        request.addParam("token","a9ca47a0115a4199bede39be25b5401a");//验密生成的Token值  必填
         //参数 end
 
         YopResponse response = YopClient.post(INTERFACE_URI, request);//发送报文

@@ -21,11 +21,11 @@ public class Divide {
         request.setSignAlg(Config.SIGN_ALG);
         
         //参数 begin
-        request.addParam("requestNo", System.currentTimeMillis());//商户请求号，投产时请不要使用时间戳，避免并发重复
-        request.addParam("merchantNo", "BM12345678901234");//商户编号
-        request.addParam("divideDetail", "BL12345678901245:1");//分账详情
+        request.addParam("requestNo", "11312311111");//商户请求号，投产时请不要使用时间戳，避免并发重复
+        request.addParam("merchantNo", Config.MERCHANTNO);//商户编号
+        request.addParam("divideDetail", "BL12345678901405:AMOUNT0.01");//分账详情
         request.addParam("serverCallbackUrl", "http://www.yeepay.com/servercallback?id=1");//分钟完成主动通知地址
-        request.addParam("trxRequestNo", "1473133974327");//原交易流水号
+        request.addParam("trxRequestNo", "4936794381309247667");//原交易流水号
         
         //参数 end
         YopResponse response = YopClient.post(INTERFACE_URI, request);//发送报文

@@ -19,10 +19,9 @@ public class QueryDivide {
         request.setSignAlg(Config.SIGN_ALG);
         
         //参数 begin
-        
-        request.addParam("divideRequestNo","123123123123");//分账请求号
-        request.addParam("merchantNo", "BM12345678901234");//商户编号
-        request.addParam("trxRequestNo", "140202020202");//原交易请求号
+        request.addParam("divideRequestNo","4869192300387075307");//分账请求号
+        request.addParam("merchantNo", Config.MERCHANTNO);//商户编号
+        request.addParam("trxRequestNo", "4628987144003894291");//原交易请求号
         
         //参数 end
         YopResponse response = YopClient.post(INTERFACE_URI, request);//发送报文

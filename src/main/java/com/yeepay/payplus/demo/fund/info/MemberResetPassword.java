@@ -28,7 +28,7 @@ public class MemberResetPassword {
         request.addParam("merchantNo", Config.MERCHANTNO);//商户编号
         request.addParam("merchantUserId", Config.USER_ID_MARCOJAN);//商户用户标识
         request.addParam("passwordBizType", "RESET");//商户用户标识, 这个参数后续版本可能会删掉
-        request.addParam("clientSource", "MOBILE"); //不传此参数的话默认为MOBILE
+        request.addParam("clientSource", "PC"); //不传此参数的话默认为MOBILE
         request.addParam("webCallBackUrl", "http://www.yeepay.com/");//页面回调地址,修改密码完成后返回商户的地址
         request.addParam("returnUrl", "http://www.qq.com/");//返回地址,点击 '返回'的回退地址
 

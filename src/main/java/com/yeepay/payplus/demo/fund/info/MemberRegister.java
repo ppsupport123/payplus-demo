@@ -28,7 +28,7 @@ public class MemberRegister {
         //参数 begin
         request.addParam("requestNo", System.currentTimeMillis());//商户请求号，投产时请不要使用时间戳，避免并发重复
         request.addParam("merchantNo", Config.MERCHANTNO);//商户编号
-        request.addParam("merchantUserId", Config.USER_ID_MARCOJAN);//商户用户标识
+        request.addParam("merchantUserId", Config.YANGYANG);//商户用户标识
         //参数 end
         YopResponse response = YopClient.post(INTERFACE_URI, request);//发送报文
         ObjectMapper mapper = new ObjectMapper();

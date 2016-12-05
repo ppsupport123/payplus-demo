@@ -27,7 +27,7 @@ public class MemberBindCard {
         // 参数 begin
         request.addParam("requestNo", System.currentTimeMillis());// 商户请求号，投产时请不要使用时间戳，避免并发重复
         request.addParam("merchantNo", Config.MERCHANTNO);// 商户编号必填
-        request.addParam("merchantUserId", Config.USER_ID_MARCOJAN);// 商户用户标识必填
+        request.addParam("merchantUserId", Config.YANGYANG);// 商户用户标识必填
         request.addParam("webCallbackUrl", "https://www.baidu.com");// 支付+使命完成后返回商户的地址
         request.addParam("returnUrl", "http://www.sina.com.cn");// 点"返回"的返回地址
         // 参数 end

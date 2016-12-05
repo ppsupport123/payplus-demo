@@ -23,7 +23,7 @@ public class QueryMerchantBlance {
         request.setSignAlg(Config.SIGN_ALG);
 
         //参数 begin
-        request.addParam("merchantNo", Config.MERCHANTNO);//商户编号,必填
+        request.addParam("merchantNo", "BL12345678901619");//商户编号,必填
         //参数 end
 
         YopResponse response = YopClient.post(INTERFACE_URI, request);//发送报文

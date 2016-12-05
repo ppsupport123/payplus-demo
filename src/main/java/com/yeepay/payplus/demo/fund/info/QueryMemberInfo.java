@@ -28,8 +28,9 @@ public class QueryMemberInfo {
         request.setSignAlg(Config.SIGN_ALG);
 
         //参数 begin
+        request.addParam("requestNo","user/queryUserI#1479692419376934");
         request.addParam("merchantNo", Config.MERCHANTNO);//商户编号必填
-        request.addParam("merchantUserId", Config.USER_ID_MARCOJAN);//商户用户标识必填
+        request.addParam("merchantUserId", "3641575412");//商户用户标识必填
         //参数 end
 
         YopResponse response = YopClient.post(INTERFACE_URI, request);//发送报文

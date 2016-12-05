@@ -7,13 +7,13 @@ import com.yeepay.payplus.demo.Config;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
 /**
  * 分账方资质上传
+ *
  * @author：lei.fang
  * @since：2016年09月02日 17:20
  * @version:1.0
@@ -22,7 +22,7 @@ public class LedgerUploadQualifications {
 
     public static final String INTERFACE_URI = "/rest/v1.0/merchant/uploadQualifications";
 
-    public static void main(String [] args) throws IOException {
+    public static void main(String[] args) throws IOException {
 
         YopRequest request = new YopRequest(Config.APP_KEY, Config.APP_SECRET, Config.URL);
         request.setEncrypt(true);

@@ -12,12 +12,12 @@ import com.yeepay.payplus.demo.Config;
  * @since: 2016年-09月-02日 下午4:37
  * @Version:1.0
  */
-public class QueryMemberBindCardList {
+public class QueryMemberBindCardListPage {
 
     /**
      * 查询会员绑卡列表接口URI地址
      */
-    public static final String INTERFACE_URI = "/rest/v1.0/user/queryBindCardList";
+    public static final String INTERFACE_URI = "/rest/v1.0/user/getBindCardListPage";
 
     public static void main(String[] args) {
 
@@ -27,8 +27,12 @@ public class QueryMemberBindCardList {
         request.setSignAlg(Config.SIGN_ALG);
 
         //参数 begin
-        request.addParam("merchantNo", Config.MERCHANTNO);//商户编号必填
-        request.addParam("merchantUserId", Config.YANGYANG);//商户用户标识必填
+        request.addParam("requestNo", System.currentTimeMillis());//商户编号必填
+        request.addParam("merchantNo", Config.MERCHANTNO);
+        request.addParam("merchantUserId", Config.XIAOLONG);//商户用户标识必填
+        request.addParam("webCallbackUrl", "www.yeepay.com");//商户编号必填
+        request.addParam("returnUrl", "www.baidu.com");//商户编号必填
+        request.addParam("clientSource", "PC");//商户编号必填
         //参数 end
 
         YopResponse response = YopClient.post(INTERFACE_URI, request);//发送报文

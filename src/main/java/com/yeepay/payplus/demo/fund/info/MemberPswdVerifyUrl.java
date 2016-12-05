@@ -29,7 +29,7 @@ public class MemberPswdVerifyUrl {
         // 参数 begin
         request.addParam("requestNo", System.currentTimeMillis());// 商户请求号，投产时请不要使用时间戳，避免并发重复
         request.addParam("merchantNo", Config.MERCHANTNO);// 商户编号必填
-        request.addParam("merchantUserId", Config.USER_ID_MARCOJAN);// 商户用户标识必填
+        request.addParam("merchantUserId", Config.YANGYANG);// 商户用户标识必填
         /**
          * 实名认证-VERIFY
          * 修改支付密码-MODIFY
@@ -43,7 +43,10 @@ public class MemberPswdVerifyUrl {
         request.addParam("tokenBizType", "UN_BIND_CARD");// 生成token业务类型
         request.addParam("webCallBackUrl", "https://www.baidu.com");// 密码校验完成后返回商户的地址
         request.addParam("returnUrl", "http://www.qq.com"); // 点击“返回”的回退地址
+        request.addParam("clientSource","MOBILE");
         // 参数 end
+
+        System.out.println(request.getParam("requestNo"));
         YopResponse response = YopClient.post(INTERFACE_URI, request);// 发送报文
         System.out.println(ToStringBuilder.reflectionToString(response));// 处理返回结果
     }
